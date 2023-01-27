@@ -1,0 +1,8 @@
+@font-face {
+	src: url("./static/SofiaSans-Medium.ttf");
+	font-family: 'sofia-sans';
+}
+
+body {
+	font-family: 'sofia-sans', 'monospace';
+}
