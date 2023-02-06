@@ -2,4 +2,4 @@
 
 __These are my websites hosted on Github__
 
-**Please do well to check them out
+**Please do well to check them out**
