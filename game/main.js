@@ -1,5 +1,6 @@
 //globals
 let isPlaying = false;
+let variable;
 const count = document.querySelector('.small_green');
 const input = document.querySelector('#input');
 const buttons = document.querySelectorAll('.btn');
@@ -144,15 +145,16 @@ function checkScores(word){
 
 input.addEventListener('input', (e) => {
     // console.log(e.target.value);
-    checkScores(e.target.value);
+    variable = e.target.value;
+    checkScores(variable);
     setInterval(checkScores, 10);
     // console.log(e)
 });
 
 input.addEventListener('focus', (e) => {
     timer();
-    levels(e.target.value);
-    setInterval(levels, 1000);
+    // levels(e.target.value);
+    // setInterval(levels, 1000);
     setInterval(timer, 1000);
 });   
 
@@ -183,43 +185,50 @@ const inst = document.querySelector('#instr');
 //     console
 // }
 
-// function levels(word){
-//     if(word === showingText.innerHTML.toLowerCase()){
-//         showing.innerHTML = 'Correct!!'
-//         scoreVal++;
-//         score.innerHTML = scoreVal;
-//         input.value = ''
-//         countSec = 11;
-//         showAWord();
-//         easier();
-//         console.log(word)
-//    } else{
-//         return;
-//    }
-// }
+function levels(word){
+    if(word === showingText.innerHTML.toLowerCase()){
+        showing.innerHTML = 'Correct!!'
+        scoreVal++;
+        score.innerHTML = scoreVal;
+        input.value = ''
+        countSec = 11;
+        showAWord();
+        easier();
+        console.log(word)
+   } else{
+        return;
+   }
+}
 
 easy.addEventListener('click', (e) => {
+    sec = 11
     countSec = 11
     count.innerHTML = "10";
-    levels();
-    
+    checkScores(variable);
+    // setInterval(checkScores, 10);
 });
 
 medium.addEventListener('click', (e) => {
-    sec = 6;
+    sec = 6
+    countSec = 6
     count.innerHTML = "5";
+    checkScores(variable);
 
 });
 
 hard.addEventListener('click', (e) => {
-    sec = 5;
+   sec = 5
+    countSec = 5
     count.innerHTML = "4";
+    checkScores(variable);
 });
 
 
 extreme.addEventListener('click', (e) => {
-    sec = 4;
+    sec = 4
+    countSec = 4
     count.innerHTML = "3";
+    checkScores(variable);
 });
 
 
@@ -242,3 +251,4 @@ inst.addEventListener('dblclick', (e) => {
 //         wordList.push(wordShow)
 //     });
 // }
+    // setInterval(levels(variable), 10);
