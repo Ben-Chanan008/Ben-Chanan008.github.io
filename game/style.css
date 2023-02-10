@@ -1,93 +1,143 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-body{
-    background-color: #2c3e50;
-    font-family: 'lato';
-    /* background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;*/
-}   
-
-.container-style > div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* height: 100vh; */
-    width: 100vw;
-    overflow: auto;
-    flex-direction: column;
+body {
+	background-color: #2c3e50;
+	font-family: 'lato';
+	/* background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;*/
 }
 
-header{
-    font-size: 30px;
-    text-align: center;
-    animation: header 1s ease-in-out;
+.container-style > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* height: 100vh; */
+	width: 100vw;
+	overflow: auto;
+	flex-direction: column;
 }
 
-.bg-primary-site{
-    background-color: #bdc3c7 ;
-    opacity: 0.25;
-    font-weight: bold;
-    line-height: 1.3em;
+header {
+	font-size: 30px;
+	text-align: center;
+	animation: header 1s ease-in-out;
 }
 
-.text-primary-site{
-    color: #bdc3c7 ;
-}    
-
-.small_green{
-    color: green;
+.bg-primary-site {
+	background-color: #bdc3c7;
+	opacity: 0.25;
+	font-weight: bold;
+	line-height: 1.3em;
 }
 
-input{
-    padding: 8px;
+.text-primary-site {
+	color: #bdc3c7;
 }
 
-input:focus{
-    outline: none;
+.small_green {
+	color: green;
 }
 
-.b-n{
-    border: none;
+input {
+	padding: 8px;
 }
 
-.buttons{
-    position: absolute;
-    left: 0;
+input:focus {
+	outline: none;
 }
 
-.extras{
-    background-color: grey;
-    box-shadow: 10px 30px 30px rgba(0, 0, 0, 0.2);
-    color: #fff;
+.b-n {
+	border: none;
 }
 
-.fas{
-   animation: down .8s ease-in-out infinite; 
+.buttons {
+	position: absolute;
+	left: 0;
 }
 
-.fass{
-    animation: down 1s ease-in-out; 
+.extras {
+	background-color: grey;
+	box-shadow: 10px 30px 30px rgba(0, 0, 0, 0.2);
+	color: #fff;
+}
+
+.fas {
+	animation: down .8s ease-in-out infinite;
+}
+
+.fass {
+	animation: down 1s ease-in-out;
 }
 
 @keyframes header {
-    from{
-        transform: translateX(-100%);
-    }
-    to{
-        transform: translateX(0%);
-    }
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
 }
 
 @keyframes down {
-    from {
-        transform: translateY(-100%);
-    }
-    to{
-        transform: translateY(0%);
-    }
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(0%);
+	}
+}
+
+
+@media screen and (max-width: 844px) {
+	
+	
+	.w-25 {
+		width: 75% !important;
+	}
+	
+	.buttons {
+		display: flex;
+	}
+	
+	.d-flex {
+		display: inline-flex !important;
+	}
+	
+	#instr {
+		display: inline !important;
+	}
+}
+
+
+@media screen and (max-width: 667px) {
+	
+	
+	.w-25 {
+		width: 75% !important;
+	}
+	
+	.buttons {
+		position: absolute;
+		flex-wrap: wrap;
+		/*flex-direction: column;*/
+		width: 50px;
+		bottom: -100px;
+		/*top: 680px;*/
+		/*margin-top: 50px;*/
+		display: flex;
+		right: 15px;
+	}
+	
+	.d-flex {
+		display: inline-flex !important;
+	}
+	
+	#instr {
+		display: inline !important;
+	}
 }
