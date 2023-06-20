@@ -1,0 +1,19 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.text{
+	@media screen and (max-width: 576px) {
+		width: 100% !important;
+	}
+}
+
+.foot{
+	@media screen and (max-width: 576px) {
+		flex-direction: column !important;
+		 
+		.socials{
+			margin-top: 20px;
+		}
+	}
+}
