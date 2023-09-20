@@ -1,18 +1,29 @@
 body {
-  font-family: "Open Sans", sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 
 @media screen and (max-width: 576px) {
-  .text {
-    width: 100% !important;
-  }
+	.text {
+		width: 100% !important;
+	}
 }
 
 @media screen and (max-width: 576px) {
-  .foot {
-    flex-direction: column !important;
-  }
-  .foot .socials {
-    margin-top: 20px;
-  }
-}/*# sourceMappingURL=style.css.map */
+	.foot {
+		flex-direction: column !important;
+	}
+	
+	.foot .socials {
+		margin-top: 20px;
+	}
+}
+
+.tag {
+	background-color: #000;
+	color: #fff;
+	border-radius: 1.2rem;
+	padding: 8px 3rem;
+	margin: 0 3px;
+}
+
+/*# sourceMappingURL=style.css.map */
